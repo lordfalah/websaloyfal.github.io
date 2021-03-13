@@ -1,0 +1,537 @@
+html{
+    overflow: auto;
+}
+
+body{
+    position: relative;
+    background-color: rgb(37, 36, 36);
+    color: white;
+    
+}
+
+
+.navbar{
+    position: fixed;    
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.jumbotron{
+    position: relative;
+}
+
+.natNav{
+    position: absolute;
+    top: 650px;
+    left: 0;
+    right: 0;
+    background-image: url(file-gambar/cyberpunk.png);
+    background-position-x: -60px;
+    background-position-y: -40px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.natNav .portfolio {
+    opacity: 0;
+    visibility: hidden;
+    transition: 1.50s ease;
+    transform: translateX(-200px) scale(0);
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    /* font-size: 50px; */
+}
+
+.natNav .portfolio.slide{
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0) scale(1.2);
+
+}
+
+
+
+.arrow{
+    position: absolute;
+    z-index: 9999;
+    width: 85px;
+    height: 85px;
+    bottom: 280px;
+    right: 100px;
+    background-color: sandybrown;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.50s ease;
+    transform: translate(0, 140px);
+    border-radius: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.arrow:hover{
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 0 7px 4px rgb(255, 255, 255);
+}
+
+.arrow .panah:hover{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow.effect{
+    opacity: 1;
+    visibility: visible;
+    transform: translate(50px, 0);
+
+}
+
+.arrow .panah{
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+
+
+
+.jumbotron{
+    background-image: url('file-gambar/4.jpg');
+    background-attachment: fixed;
+    background-repeat: repeat;
+    background-position-y: 860px;
+    margin-top: 55px;
+    
+}
+
+
+
+
+.content-teks{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    opacity: 0.85;
+    color: white;
+    text-shadow: 0 3px 6px rgb(0, 0, 0);
+}
+
+.title{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+}
+
+.talent{
+    margin-top: 30px;
+    font-weight: lighter;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 58px;
+    text-shadow: 0 3px 6px rgb(0, 0, 0);
+}
+
+.img-sett{
+    border: 5px solid rgb(0, 0, 0);
+    background-repeat: repeat ;
+    cursor: pointer;
+}
+
+.line{
+    border: 1px solid rgb(214, 214, 214);
+}
+
+.liner{
+    margin-top: 30px;
+}
+
+
+
+.card{
+    box-shadow: 0 0 11px 3px rgb(71, 71, 71);
+    
+}
+
+/* Class Section */
+
+
+.info-card{
+    margin-top: 220px;
+}
+
+.info-teks{
+    margin-top: 250px;
+}
+
+
+/* Class Section End*/
+
+
+
+/* Register */
+
+.register{
+    margin-top: 250px;
+}
+
+/* Register End*/
+
+
+
+
+
+
+
+/* Footer */
+
+footer{
+    margin-top: 300px;
+    overflow: auto;
+    color: white;
+}
+
+footer .foot-content{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(54, 54, 54);
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.foot-content .container p{
+    font-family: monospace;
+    font-size: 28px;
+    font-weight: bold;
+    
+}
+
+
+.foot-content .container .copyRight{
+    transform: translate(0, -80px);
+    opacity: 0;
+    transition: 0.65s ease;
+}
+
+.foot-content .container .copyRight.trans{
+    opacity: 1;
+    transform: translate(0, 10px);
+}
+
+/* Footer End*/
+
+
+
+/* for js */
+
+@keyframes fadein{
+    0%{
+        opacity: 0;
+    }
+
+    50%{
+        opacity: 0.5;
+    }
+
+    100%{
+        opacity: 1;
+        transition: 1s ease;
+        background-color: black;
+    }
+}
+
+.kecerahan{
+    animation: fadein;
+}
+
+.warna{
+    background-color: black;
+}
+
+.all-card .card{
+    opacity: 0;
+    visibility: hidden;
+    transform: translate(0, 100px);
+    transition: 0.80s;
+}
+
+.all-card .card.muncul{
+    transform: translate(0, 0);
+    opacity: 1;
+    visibility: visible;
+}
+
+/* .all-card .card.tampil{
+    opacity: 0;
+} */
+
+.info-teks .first-teks{
+    opacity: 0;
+    transform: translate(35px, 40px) rotateX(60deg);
+    transition: 1.45s ease;
+    
+}
+
+.info-teks .first-teks.see{
+    opacity: 1;
+    transform: translate(0, 0) rotateY(18deg);
+}
+
+
+.info-teks .second-teks{
+    opacity: 0;
+    transform: translate(-35px, -40px) rotateX(-60deg);
+    transition: 1.45s ease;
+    
+}
+
+.info-teks .second-teks.see{
+    opacity: 1;
+    transform: translate(0, 0) rotateY(-18deg);
+}
+
+.putar{
+
+    background-color: black;
+}
+
+
+
+/* name */
+.natNav .portfolio span{
+    transition: 0.20s ease;
+    display: inline-block;
+}
+
+.natNav .portfolio span:hover{
+    cursor: pointer;
+    transform: scale(1.4) translate(0, 15px);
+    font-weight: bolder;
+}
+
+.market span{
+    transition: 0.20s ease;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.market span:hover{
+    cursor: pointer;
+    transform: scale(1.8) translate(0, 15px);
+    font-weight: bolder;
+}
+
+.copyRight span{
+    transition: 0.20s ease;
+    display: inline-block;
+    margin-top: 20;
+}
+
+.copyRight span:hover{
+    transform: scale(1.8) translate(0, -15px);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.info-teks span{
+    transition: 0.20s ease;
+    display: inline-block;
+}
+
+.info-teks span:hover{
+    cursor: pointer;
+    transform: scale(1.8) translate(0, 15px);
+    font-weight: bolder;
+}
+
+.register .container .reges span{
+    transition: 0.20s ease;
+    display: inline-block;
+}
+
+.register .container .reges span:hover{
+    cursor: pointer;
+    transform: scale(1.8) translate(0, 15px);
+    font-weight: bolder;
+}
+
+
+/* name ENd*/
+
+
+
+
+
+
+/* Register */
+
+.register .form-group{
+    transform: translate(0, -100px);
+    transition: 1s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+.register .form-group.gerak{
+    transform: translate(0, 0);
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Register End*/
+
+
+/* for js End*/
+
+
+
+
+
+
+/* Black */
+
+.placeOver{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.placeOver:target{
+    
+    bottom: 0;
+    right: 0;
+    
+}
+
+.placeOver .close{
+    position: fixed;
+    font-size: 40px;
+    left: 740px;
+    z-index: 9;
+    top: 60px;
+    transition: 0.80s ease;
+    display: inline-block;
+    text-indent: -9999px;
+}
+
+.placeOver .close.skin{
+    /* transform: rotateY(180deg); */
+    
+    color: white;
+    font-size: 40px;
+    text-shadow: 0 0 5px whitesmoke;
+    text-indent: 0px;
+}
+
+
+/* Black End */
+
+
+
+/* COntent IMG */
+
+.gambar{
+    position: fixed;
+    left: 360px;
+    right: 360px;
+    top: 120px;
+    visibility: hidden;
+    z-index: 999;
+    border: 5px solid white;
+    height: auto;
+    opacity: 0;
+    transition: 0.50s ease;
+}
+
+.gambar.nampak{
+    visibility: visible;
+    opacity: 1;
+}
+
+/* COntent IMG End*/
+
+
+
+/* responsive for Mobaile*/
+
+@media( max-width: 700px){
+    .jumbotron{
+        /* background-attachment: fixed;
+        background-repeat: repeat;
+        background-position-y: 860px; */
+        height: 725px;
+    }
+
+
+    .natNav{
+        position: absolute;
+        top:  650px;
+        left: 0;
+        right: 0;
+        background-repeat: no-repeat;
+        background-position-x: -330px;
+        background-attachment: fixed;
+        color: black;
+    }
+    .arrow{
+        position: absolute;
+        z-index: 9999;
+        width: 85px;
+        height: 85px;
+        bottom: 290px;
+        right: 45px;
+        background-color: sandybrown;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.80s ease;
+        transform: translate(0, 140px);
+        border-radius: 50%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+
+    .info-teks .first-teks{
+        opacity: 0;
+        transform: translate(0, 40px) rotateX(10deg);
+        transition: 1.45s ease;
+        
+    }
+    
+    .info-teks .first-teks.lihat{
+        opacity: 1;
+        transform: translate(0, 0) rotateY(10deg);
+    }
+    
+    
+    .info-teks .second-teks{
+        opacity: 0;
+        transform: translate(0, -40px) rotateX(-10deg);
+        transition: 1.45s ease;
+        
+    }
+    
+    .info-teks .second-teks.lihat{
+        opacity: 1;
+        transform: translate(0, 0) rotateY(-10deg);
+    }
+
+}
+
+
+
+/* responsive Akhir*/
